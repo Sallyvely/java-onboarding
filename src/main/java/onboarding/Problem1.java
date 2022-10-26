@@ -9,7 +9,6 @@ class Problem1 {
         int pobimax=0;
         int crongmax=0;
 
-        //포비 페이지의 합과 곱 구하기
         for(int i=0;i<pobi.size();i++){
             pobisum[i+2] = pobi.get(i)/100+pobi.get(i)/10+ pobi.get(i)%10;
             if(pobi.get(i)>99){// 3자리일 경우 각 자리 곱하기
@@ -18,7 +17,6 @@ class Problem1 {
             else pobisum[i] = (pobi.get(i)/10)*(pobi.get(i)%10);
         }
 
-        //크롱 페이지의 합과 곱 구하기
         for(int i=0;i<crong.size();i++){
             crongsum[i+2] = crong.get(i)/100+crong.get(i)/10+ crong.get(i)%10;
             if(crong.get(i)>99){// 3자리일 경우 각 자리 곱하기
@@ -29,7 +27,6 @@ class Problem1 {
             }
         }
 
-        //배열에서 가장 큰 수 찾는 과정
         for(int i=0; i<pobisum.length;i++){
             if(pobisum[i]>pobimax){
                 pobimax=pobisum[i];
@@ -44,7 +41,7 @@ class Problem1 {
                 crongmax=0;
             }
         }
-        //누가 큰지 비교하기
+
         if(crongmax>pobimax){
             answer=2;
         }

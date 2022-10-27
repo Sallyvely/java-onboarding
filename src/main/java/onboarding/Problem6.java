@@ -14,17 +14,13 @@ public class Problem6 {
                 if(forms.get(i).get(1).contains(name.substring(j,j+2))){
                     count= count +1;
                     if(count>1) {
-                        answer.add(forms.get(i));
+                        answer.add(forms.get(i).get(0));
 
                     }
 
                 }
             }
-
         }
-
-
         return answer;
     }
 }
-S

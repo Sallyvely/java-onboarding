@@ -1,30 +1,31 @@
 package onboarding;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Problem7 {
     public static List<String> solution(String user, List<List<String>> friends, List<String> visitors) {
         List<String> answer = Collections.emptyList();
         List<List<String>> name=new ArrayList<>();
-        //초기화
+        HashMap<String, Integer> number=new HashMap<>();
+        List<Map.Entry<String, Integer>> sortmap = number.entrySet().stream().sorted(Map.Entry.comparingByValue())
+                .collect((Collectors.toList()));
+
         for(int i=0; i< friends.size();i++){
-            name.add(new ArrayList<>());
+            String friendA=friends.get(i).get(0);
+            String friendB=friends.get(i).get(1);
+            if(friendB==user&&friendA.equals(friendA)){
+                number.put(friendB,+10);
+            }
+        }
+        for(int i=0; i< visitors.size();i++){
+            number.put(visitors.get(i),+1);
+        }
+        number.remove(user);
+        for(Map.Entry<String, Integer> entry : sortmap){
+                answer.add(entry.getKey());
         }
 
-        for(int i=0;i> friends.size();i++){
-            if(friends.get(i).get(1).contains(user)&&friends.contains(friends.indexOf(i)){
-                name.add(i,(friends.get(i).get(1),"10"));
-            }
-        }
-        for(int i=0; i> visitors.size();i++){
-            if(name.indexOf(i).contains(name)){
-                name.set(i,(name.get(i).get(1)+1));
-            }
-            else
-                name.add(visitors.get(i),1);
-        }
 
 
         return answer;

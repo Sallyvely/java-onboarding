@@ -1,18 +1,36 @@
 package onboarding;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Problem2 {
     public static String solution(String cryptogram) {
-        String answer = "answer";
+        String answer = "";
+        String[] decode=cryptogram.split("");
+        List<String> list= Arrays.asList(decode);
+        List<String> codestr= new ArrayList<>();
+        codestr.addAll(list);
+        boolean check = true;
 
-       while (true){
-            for(int i=0; i<cryptogram.length();i++){
-                if(cryptogram.charAt(i)==cryptogram.charAt(i+1)){
-                    answer=cryptogram.substring((i-1)+(i+2));
-                } else if (!(cryptogram.charAt(i)==cryptogram.charAt(i+1))){
-                    break;
+        while(check){
+            check = false;
+            for(int i=0;i<list.size()-1;i++){
+                if(list.get(i).equals(list.get(i+1))){
+                    codestr.remove(i);
+                    codestr.remove(i);
+                    list=codestr;
+                    check=true;
+
                 }
+
             }
-       }
+        }
+       answer=String.join("",list);
         return answer;
-    }
-}
+            }
+        }
+
+
+

@@ -5,17 +5,12 @@ import java.util.List;
 public class Problem5 {
     public static List<Integer> solution(int money) {
         ArrayList<Integer> answer = new ArrayList<>();
+        int[] moneyType={50000,10000,5000,1000,500,100,50,10,1};
 
-        answer.add(money/50000);
-        answer.add(money%50000/10000);
-        answer.add(money%50000%10000/5000);
-        answer.add(money%50000%10000%5000/1000);
-        answer.add(money%50000%10000%5000%1000/500);
-        answer.add(money%50000%10000%5000%1000%500/100);
-        answer.add(money%50000%10000%5000%1000%500%100/50);
-        answer.add(money%50000%10000%5000%1000%500%100%50/10);
-        answer.add(money%50000%10000%5000%1000%500%100%50%10);
-
+        for(int i=0; i<moneyType.length;i++){
+            answer.add(money/moneyType[i]);
+            money=money%moneyType[i];
+        }
 
         return answer;
     }

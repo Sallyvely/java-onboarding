@@ -19,7 +19,6 @@ public class Problem3 {
 
         for(int count=1;count<=number;count++){
             String str=String.valueOf(count);
-            System.out.println(str);
             for(int i=0; i<str.length();i++){
                 char value=str.charAt(i);
                 answer=answer+Chk.chk369(value);

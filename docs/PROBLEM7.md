@@ -24,3 +24,10 @@
 | user | friends | visitors | result |
 | --- | --- | --- | --- |
 | "mrko" | [ ["donut", "andole"], ["donut", "jun"], ["donut", "mrko"], ["shakevan", "andole"], ["shakevan", "jun"], ["shakevan", "mrko"] ] | ["bedi", "bedi", "donut", "bedi", "shakevan"] | ["andole", "jun", "bedi"] |
+
+## 작업내역
+
+- 친구의 친구 점수 기록하는 반복문
+  - 친구목록에 user가 있다면 점수에서 삭제
+- 방문자 점수 기록하는 반복문
+  - user 친구가 있다면 점수에서 삭제

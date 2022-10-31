@@ -21,3 +21,7 @@
 | --- | --- |
 | "browoanoommnaon" | "brown" |
 | "zyelleyz" | "" |
+
+
+# 작업내역
+- while 문을 이용하여 앞뒤로 같은 문자가 없는지 검사 기능

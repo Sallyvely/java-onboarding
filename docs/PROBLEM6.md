@@ -21,3 +21,8 @@
 | forms | result |
 | --- | --- |
 | [ ["jm@email.com", "제이엠"], ["jason@email.com", "제이슨"], ["woniee@email.com", "워니"], ["mj@email.com", "엠제이"], ["nowm@email.com", "이제엠"] ] | ["jason@email.com", "jm@email.com", "mj@email.com"] |
+
+# 작업내역
+
+- 중복되는 닉네임을 찾기 위해 닉네임 두글자 단위로 자르는 반복문
+- 중복되는 닉네임이 있으면서 자기자신이 아닌 경우, 해당 이메일 주소 반환

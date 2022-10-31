@@ -18,8 +18,7 @@ public class Problem2 {
             check = false;
             for(int i=0;i<list.size()-1;i++){
                 if(list.get(i).equals(list.get(i+1))){
-                    codestr.remove(i);
-                    codestr.remove(i);
+                    codestr.subList(i,i+2).clear();
                     list=codestr;
                     check=true;
 
